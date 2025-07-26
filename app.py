@@ -6,13 +6,12 @@ app = Flask(__name__)
 def index():
     return "✅ Flask app is running on Render!"
 
-# ✅ Webhook route for Salla
-@app.route('/webhook', methods=['POST'])
-def salla_webhook():
-    # Log the incoming webhook payload
-    data = request.get_json()
-    print("✅ Webhook received from Salla:")
-    print(data
+@app.route("/webhook", methods=["POST"])
+def webhook():
+    data = request.json
+    print("✅ Webhook received:")
+    print(data)
+    return jsonify({"status": "received"}), 200
 
 
 if __name__ == '__main__':
