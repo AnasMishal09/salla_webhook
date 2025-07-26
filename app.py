@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('https://salla-webhook-7l4u.onrender.com/')
 def index():
     return "✅ Flask app is running on Render!"
 
