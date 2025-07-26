@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return "✅ Flask app is running on Render!"
 
-@app.route("/webhook", methods=["POST"])
+@app.route("https://salla-webhook-7l4u.onrender.com/webhook", methods=["POST"])
 def webhook():
     data = request.json
     print("✅ Webhook received:")
