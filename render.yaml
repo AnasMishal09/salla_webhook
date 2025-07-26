@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: salla-webhook
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: EXTERNAL_API_KEY
+        value: your_external_api_key
+      - key: EXTERNAL_API_URL
+        value: https://external.com/api/orders
+      - key: SALLA_WEBHOOK_SECRET
+        value: your_salla_secret
